@@ -1,76 +1,70 @@
-import React from 'react'
-import { View,Text,Box, Image, Heading, VStack, Input, Button, Pressable } from 'native-base'
-import Colors from '../color'
-import { MaterialIcons,AntDesign } from '@expo/vector-icons';
-
-
-
+import { Box, Button, Heading, Image, Input, Pressable, Text, VStack } from "native-base";
+import React from "react";
+import Colors from "../color";
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 
 function LoginScreen() {
-  return (
-    <Box flex={1} bg={Colors.black}>
-      <Image
-        flex={1}
-        alt="Logo"
-        resizeMode='cover'
-        size="lg"
-        w="full"
-        source={require("../../assets/images/OIP.jpg")}
-        />
-      <Box
-          w="full"
-          h="full"
-          position="absolute"
-          top="0"
-          px="6"
-          justifyContent="center"
-        >
-          <Heading color="white">LOGIN</Heading>
-          <VStack space={5} pt="6">
-            {/*Email */}
-            <Input
-              InputLeftElement={<MaterialIcons name="email" size={24} color={Colors.main} />
 
-              }
-                variant="underlined"
-                placeholder="username@gmail.com"
-                w="70%"
-                pl={2}
-                color={Colors.main}
-                borderBottomColor={Colors.underline}
-                />
-                {/*PASSWORD */}
-                <Input
-              InputLeftElement={<AntDesign name="eye" size={24} color={Colors.main} />
-
-              }
-                variant="underlined"
-                placeholder="*********"
-                w="70%"
-                type='password'
-                pl={2}
-                color={Colors.main}
-                borderBottomColor={Colors.underline}
-                />
-          </VStack>
-          <Button 
-          _pressed={{
-            bg: Colors.main,
-          }}
-          my={30} 
-          w="40%" 
-          rounded={50} 
-          bg={Colors.main}
-          >
-            LOGIN
-          </Button>
-          <Pressable mt={3}>
-            <Text color={Colors.deepestGray}>SIGN UP</Text>
-          </Pressable>
-          
-      </Box>
-    </Box>
-  );
+    return (
+        <Box flex={1} bg={Colors.black}>
+            <Image
+                source={require("../../assets/cover.png")}
+            />
+            <Box
+                w="full"
+                h="full"
+                position="absolute"
+                top="0"
+                px="6"
+                justifyContent="center"
+            >
+                <Heading color="gray">LOGIN</Heading>
+                <VStack space={5} pt="6">
+                     {/* email */}
+                    <Input 
+                    InputLeftElement={
+                        <MaterialIcons name="email" size={20} color="white" />
+                    }
+                    variant="underlined" 
+                    placeholder="user@gmail.com" 
+                    w="70%" 
+                    pl={2}
+                    color="white"
+                    borderBottomColor={Colors.gray}
+                    />
+                    {/* password */}
+                    <Input 
+                    InputLeftElement={
+                        <Ionicons name="eye" size={20} color="white" />
+                    }
+                    variant="underlined" 
+                    placeholder="********" 
+                    w="70%" 
+                    pl={2}
+                    type="password"
+                    color="white"
+                    borderBottomColor={Colors.gray}
+                    />
+                </VStack>
+                <Button 
+                _pressed={{
+                    bg:"white"
+                }}
+                my={30} 
+                w="40%" 
+                rounded={50} 
+                bg={Colors.main}
+                _text={{
+                    color: Colors.black
+                }}
+                >
+                    LOGIN
+                </Button>
+                <Pressable mt={4}>
+                    <Text color={Colors.subgreen}>SIGN IN ?</Text>    
+                </Pressable> 
+            </Box>
+        </Box>
+    )
 }
-
 export default LoginScreen
