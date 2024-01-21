@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "project",
-    "slug": "project",
+    "name": "App shopping",
+    "slug": "Shopp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/faviocon.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/unsplash.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/unsplash.png",
-        "backgroundColor": "#000000"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/faviocon.png"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
